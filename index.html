@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+<div id="container-fluid">
+ <div id="nav">
+     <button id="addMovie" name="addMovie" class="btn btn-primary">Add New Movie</button>
+ </div>
+  <h1 id="mainTitle">Great Movies List</h1>
+  <div id="row">
+   <form name='newMovieForm' id="newMovieForm">
+     Name<br>
+      <input type="text" name="movieTitle" class="color" id="movieTitle" placeholder="New Movie"><br>Time (min)<br>
+      <input type="number" name="runningTime" class="color" id="runningTime" placeholder="Running Time"><br>Year<br>
+      <input type="number" name="year" class="color" id="year" placeholder="Year">
+      <div id="genre">
+         <input type="radio" name="action" value="action"> action <br>
+          <input type="radio" name="genre" value="comedy" /> comedy<br />
+        <input type="radio" name="genre" value="drama" /> drama<br />
+        <input type="radio" name="genre" value="horror" /> horror
+      </div>
+      <textarea cols="50" rows="4" id="description" class="color" name="description" placeholder="Movie Description"></textarea><br>
+      <input type="submit" id="submit" value="Add Movie">
+       
+   </form>
+   <div id="movieDetails"></div>
+    </div>
+   <div id="list">
+       <ul id="ul">
+           
+       </ul>
+   </div>
+    <script src='js/script.js'></script>
+    <script src="js/helpers.js"></script>
+    <script src="js/movie.js"></script>
+    <script src="js/movieapp.js"></script>
+    
+    </div>
+</body>
+</html>
