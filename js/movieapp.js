@@ -15,6 +15,8 @@ var form = document.getElementById('newMovieForm');
 
     form.addEventListener('submit', function(evt){
     evt.preventDefault();
+    var myUl = document.getElementById('ul');
+        myUl.innerHTML = '';
     var title = form.movieTitle.value;
     var runningTimeInMinutes = form.runningTime.value;
     var year = form.year.value;
@@ -50,6 +52,15 @@ var form = document.getElementById('newMovieForm');
 
     return 0;
 });
+        
+        form.reset();
+        
+         for(var i = 0; i < movieObj.length; i++)
+    {
+        var myText = movieObj[i].title + ' | ' + movieObj[i].runningTimeHours() + ' | ' + movieObj[i].year;
+        var movElement = e('li', myText, {rel: movieObj[i].preview()}, {color: 'white'})
+        document.getElementById('ul').appendChild(movElement);
+                     };
    
 });
     // random number function
